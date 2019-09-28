@@ -7,8 +7,7 @@ void main() {
 }
 
 class HomePage extends StatelessWidget {
-  final _longText =
-      "Discover the meaning of the Jarnel name on Ancestry®. Find your family's average life expectancy, most common occupation, and more.";
+  final _longText = "Once a modern shopping mall is built, our rents will increase significantly, and we will have to increase our prices as a result. The main reason people come to this market is so they can get items such as imported food at very low prices.";
   final _shortText = "Discover the meaning of the Jarnel name on Ancestry®.";
 
   @override
@@ -16,10 +15,22 @@ class HomePage extends StatelessWidget {
     // TODO: implement build
 
     return Scaffold(
-        appBar: AppBar(title: new Text('Home')),
+        appBar: AppBar( title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/logo.png',
+              fit: BoxFit.contain,
+              height: 32,
+            ),
+            Container(
+                padding: const EdgeInsets.all(8.0), child: Text('MODERN SHOP'))
+          ],
+
+        )),
         body: Column(
           children: <Widget>[
-//            Image.asset("assets/images/a_dot_burr.jpeg"),
+           Image.asset("assets/images/shop.png",height: 250),
             Container(
               child: Text(
                 _longText,
@@ -62,7 +73,7 @@ class HomePage extends StatelessWidget {
                         color: Colors.green,
                         borderRadius: BorderRadius.circular(8)),
                     child: Icon(
-                      Icons.airport_shuttle,
+                      Icons.weekend,
                       color: Colors.white,
                     ))
               ],
@@ -78,7 +89,7 @@ class HomePage extends StatelessWidget {
                         color: Colors.green,
                         borderRadius: BorderRadius.circular(8)),
                     child: Icon(
-                      Icons.account_balance,
+                      Icons.work,
                       color: Colors.white,
                     )),
                 Container(
@@ -90,7 +101,7 @@ class HomePage extends StatelessWidget {
                         color: Colors.green,
                         borderRadius: BorderRadius.circular(8)),
                     child: Icon(
-                      Icons.add_shopping_cart,
+                      Icons.accessible,
                       color: Colors.white,
                     )),
                 Container(
@@ -102,7 +113,7 @@ class HomePage extends StatelessWidget {
                         color: Colors.green,
                         borderRadius: BorderRadius.circular(8)),
                     child: Icon(
-                      Icons.airport_shuttle,
+                      Icons.archive,
                       color: Colors.white,
                     ))
               ],
